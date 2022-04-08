@@ -4,10 +4,7 @@ import com.chehejia.web.entity.UserAccount;
 import com.chehejia.web.result.ResponseBody;
 import com.chehejia.web.service.UserAccountService;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -23,8 +20,13 @@ public class UserAccountController {
     @Resource
     private UserAccountService service;
 
-    @GetMapping("/add")
-    public ResponseBody examOverview(@RequestBody UserAccount userAccount) {
+    @PostMapping("/add")
+    public ResponseBody add(@RequestBody UserAccount userAccount) {
         return service.insert(userAccount);
+    }
+
+    @GetMapping("/select")
+    public ResponseBody select() {
+        return service.select();
     }
 }

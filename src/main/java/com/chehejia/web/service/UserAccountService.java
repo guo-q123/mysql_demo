@@ -3,7 +3,6 @@ package com.chehejia.web.service;
 import com.chehejia.web.entity.UserAccount;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.chehejia.web.result.ResponseBody;
-import com.chehejia.web.result.ResultGenerator;
 
 /**
 * @author guoqiang3
@@ -13,4 +12,6 @@ import com.chehejia.web.result.ResultGenerator;
 public interface UserAccountService extends IService<UserAccount> {
 
     ResponseBody insert(UserAccount userAccount);
+
+    ResponseBody select();
 }
