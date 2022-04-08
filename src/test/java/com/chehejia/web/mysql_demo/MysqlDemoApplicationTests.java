@@ -10,7 +10,6 @@ class MysqlDemoApplicationTests {
 
     @Test
     void contextLoads() {
-
     }
 
 }
