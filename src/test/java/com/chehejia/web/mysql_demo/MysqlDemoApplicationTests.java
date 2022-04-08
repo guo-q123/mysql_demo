@@ -10,8 +10,7 @@ class MysqlDemoApplicationTests {
 
     @Test
     void contextLoads() {
-        System.out.println("new UUID().toString() = " + UUID.randomUUID());
-        System.out.println();
+
     }
 
 }
